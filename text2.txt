@@ -86,3 +86,20 @@ setTimeout(function() {
             "text": "Hello"
         });
     }
+
+
+
+
+
+    git commands 
+
+
+    git remote add origin "sshaddress"
+     
+
+     to pull
+     git pull origin main 
+
+     to push
+     git push origin main
+     
