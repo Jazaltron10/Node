@@ -1,0 +1,88 @@
+
+    var http = require("http");
+
+    var dateModule = require('./index2');
+
+/*  In the line, the period and forward slash (./) characters 
+    indicate that the currentDate module exists in the same folder 
+    as the folder that contains this app.js file.
+ */
+
+    // Read the port from the underlying environment. 
+    
+    // If it does not exist, use the default port: 8080
+    var port = process.env.VCAP_APP_PORT || 8080;
+
+
+
+// Create the server and listen to requests on the specified port.
+    http.createServer(function (request, response) {
+        // Set the content type of the response
+        response.writeHead(200, {'Content-Type': 'text/plain'});
+
+
+
+
+        // Write a simple Hello World message,
+        // which will be shown in the user's web browser
+        response.end('Hello NodeJS! The time now is: ' + dateModule.currentDateTime());
+    }).listen(port);
+
+/* request: This object contains the HTTP request details 
+from the client. You should 
+be able to read parameters from this 
+request to use in your application. */
+
+
+/*response: This object is created by the HTTP module. 
+ You add the response details to it. 
+Then, the HTTP module sends the response object 
+back to the client as an HTTP response to the 
+original HTTP request from the client. */
+
+
+
+
+/* 
+Asynchronous method invocation
+This is a design pattern where an invoker method is not blocked while waiting for the invoked method to finish processing and return a result. Instead, the invoked method is run in a separate thread and the invoker is notified when the result is ready.
+
+
+Callback function
+This is a function that is passed to another function as a parameter, and the callback function is called and run within this other function. */
+
+
+
+/* setTimeout(function() {
+    console.log("A");
+}, 3000);
+
+setTimeout(function() {
+    console.log("B");
+}, 2000);
+
+setTimeout(function() {
+    console.log("C");
+}, 4000);
+
+setTimeout(function() {
+    console.log("D");
+}, 1000); */
+
+    const http = require('http');
+    
+    const https = require('https');
+
+
+    var portNumber = process.env.VCAP_APP_PORT || 8080;
+    const server = http.createServer(handleRequests);
+    server.listen(portNumber, function() {
+    });
+
+    function handleRequests(userRequest, userResponse) {
+        userResponse.writeHead(200, {'Content-Type': 'text/plain'});
+        const inputData = JSON.stringify({
+            "model_id": "en-es",
+            "text": "Hello"
+        });
+    }
