@@ -1,1 +1,25 @@
-{}
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "description": "The Awesome Tales Of The One Named Node.js",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server",
+    "start": "node server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jazaltron10/Node.git"
+  },
+  "keywords": [],
+  "author": "jazaltron",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Jazaltron10/Node/issues"
+  },
+  "homepage": "https://github.com/Jazaltron10/Node#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}

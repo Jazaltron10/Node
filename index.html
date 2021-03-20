@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        
+        *, *:before, *:after{
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 2em;
+            background-color: rgb(65, 187, 224);
+            color: white;
+        }
+        .nav-list{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            background-color: coral;
+            box-shadow: 0 0 10px #cfd8dc;
+            margin: 0;
+            padding: 1rem 0;
+            border-radius: 10px;
+        }
+        .nav-item{
+            list-style: none;
+            margin-right: 2rem;
+        }
+        .nav-item:first-child{
+            margin: auto;
+            margin-left: 5rem;
+        }
+        div > ul > li > a {
+            text-decoration: none;
+            color: aliceblue;
+
+        }
+        div > ul > li > a:hover{
+            transition: 0.5s;
+            color: yellow;
+        }
+    </style>
+    <title>Dark Lanes Demo Tape</title>
+</head>
+
+
+<body>
+    <div>
+        <ul class="nav-list">
+            <li class="nav-item"><a href="/">
+                Home
+            </a></li>
+            <li class="nav-item"><a href="/about">
+                About
+            </a></li>
+            <li class="nav-item"><a href="/blog">
+                Blog
+            </a></li>
+            <li class="nav-item"><a href="/contact">
+                Contact
+            </a></li>
+            <li class="nav-item">
+                <button>Donate</button>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
