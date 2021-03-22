@@ -20,7 +20,7 @@
             display: flex;
             justify-content: flex-end;
             align-items: center;
-            background-color: coral;
+            background-color: rgba(0, 0, 0, 0.5);
             box-shadow: 0 0 10px #cfd8dc;
             margin: 0;
             padding: 1rem 0;
@@ -41,8 +41,24 @@
         }
         div > ul > li > a:hover{
             transition: 0.5s;
-            color: yellow;
+            color: red;
         }
+        button{
+            padding: 10px;
+            background-color: lime;
+            color: black;
+            font-size: 2rem;
+            border-radius: 15px;
+            border: none;
+            transition: background-color, color 1s ease-in;
+        }
+        button:hover{
+            background-color: red;
+            cursor: pointer;
+            color: white;
+            
+        }
+
     </style>
     <title>Dark Lanes Demo Tape</title>
 </head>
@@ -52,7 +68,7 @@
     <div>
         <ul class="nav-list">
             <li class="nav-item"><a href="/">
-                Home
+                <img src="/lion.png" alt="" height="50px">
             </a></li>
             <li class="nav-item"><a href="/about">
                 About
